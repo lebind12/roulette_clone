@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>돌려돌려 돌림판</title>
+    <link rel="stylesheet" type="text/css" href="roulette.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"
+      integrity="sha512-VjRpiWhUqdNa9bwBV7LnlG8CwsCVPenFyOQTSRTOGHw/tjtME96zthh0Vv9Itf3i8w4CkUrdYaS6+dAt1m1YXQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <h1 contenteditable="true" spellcheck="false">행운의 돌림판</h1>
+        <canvas width="600" height="600" class="roulette"
+          >지원하지 않는 브라우저입니다. Google Chrome 최신 버전을
+          사용해주세요.</canvas
+        >
+        <div id="roll" class="button"></div>
+      </div>
+      <ul>
+        <li class="item empty" data-chance="0">
+          <div
+            class="item-title"
+            placeholder="이름"
+            contenteditable="true"
+          ></div>
+          <div class="item-weight" data-weight="1"></div>
+          <div class="item-weight-add">+</div>
+          <div class="item-weight-sub">-</div>
+          <div class="item-delete">X</div>
+        </li>
+      </ul>
+    </div>
+    <div id="button-tooltip" style="display: none">
+      <div>
+        <span class="command">Alt + 클릭</span><span class="number">±100</span>
+      </div>
+      <div>
+        <span class="command">Ctrl + 클릭</span><span class="number">±10</span>
+      </div>
+      <div><span class="command">클릭</span><span class="number">±1</span></div>
+    </div>
+    <div id="result" style="display: none"></div>
+    <script type="text/javascript" src="roulette.js"></script>
+  </body>
+</html>
