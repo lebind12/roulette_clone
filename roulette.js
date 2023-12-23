@@ -62,9 +62,9 @@ var colorPalette = [
 var noname = "이름 없음";
 var font = "32px Hanna";
 var font2 = font; //'36px Sans-serif';
-var line_color = "#37474f";
-var bgColor = "#ffffff";
-var pinColor = "#37474f";
+var line_color = "#334C11";
+var bgColor = "#A4D78D";
+var pinColor = "#ffffff";
 var fontStrokeStyle = "#37474f";
 
 function DEG2RAD(degree) {

@@ -4,7 +4,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: #006000;
+  background: #04623f;
 }
 
 * {
@@ -22,9 +22,12 @@ h1 {
   width: 400px;
   overflow: hidden;
 
-  /*border-bottom: 1px dashed #607D8B;*/
-  color: #37474f;
-  /*text-shadow: -1px 0 #607D8B, 0 1px #607D8B, 1px 0 #607D8B, 0 -1px #607D8B;*/
+  border-bottom: 1px #607d8b;
+  color: #000000;
+  /* text-shadow: -3px 0 #116d23, 0 3px #116d23, 3px 0 #116d23, 0 -3px #116d23; */
+}
+.img-absolute {
+  position: absolute;
 }
 
 .container {
@@ -125,7 +128,7 @@ li.item.empty::after {
 }
 li.item.empty > .item-title::after {
   content: "항목 추가";
-  color: #aaa;
+  color: #000000;
 }
 li.item.empty > .item-title:focus::after {
   content: "";
@@ -143,8 +146,8 @@ li.item > .item-title {
 
   border-radius: 0px;
 
-  color: black;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: #640505;
+  text-shadow: -1px 0 #92211f, 0 1px #92211f, 1px 0 #92211f, 0 -1px #92211f;
 }
 
 li.item > .item-title:focus {
