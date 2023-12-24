@@ -63,7 +63,7 @@ var noname = "이름 없음";
 var font = "32px Hanna";
 var font2 = font; //'36px Sans-serif';
 var line_color = "#334C11";
-var bgColor = "#A4D78D";
+var bgColor = "#ffffff"
 var pinColor = "#ffffff";
 var fontStrokeStyle = "#37474f";
 
@@ -222,7 +222,6 @@ function Roulette() {
 
   function OnStart() {
     try {
-      $(document.body).css("background", bgColor);
       R.canvas = document.querySelector("canvas");
       R.ctx = R.canvas.getContext("2d", true);
       R.size = { width: R.canvas.width, height: R.canvas.height };
@@ -340,7 +339,7 @@ function Roulette() {
     // clear
     
     
-    R.buffer.fillStyle = bgColor;
+    R.buffer.fillStyle = "transparent";
     R.buffer.fillRect(0, 0, R.size.width, R.size.height);
     //R.buffer.clearRect(0, 0, R.size.width, R.size.height);
 
@@ -352,7 +351,7 @@ function Roulette() {
 
     // shadow
     R.buffer.shadowBlur = 15;
-    R.buffer.shadowColor = "black";
+    R.buffer.shadowColor = "transparent";
     drawArc(
       {
         x: R.center.x,
@@ -376,13 +375,6 @@ function Roulette() {
       },
       ""
     );
-    
-    //======================================================================================
-    // 배경 넣을 곳
-    // var img = new Image()
-    // img.src = "assets/christmas_hitori_bocchi_woman.png"
-    // R.buffer.drawImage(img, 0, 0)
-    //======================================================================================
 
     //
     R.current = null;
@@ -476,6 +468,7 @@ function Roulette() {
     R.buffer.stroke();
 
     if (R.current) {
+      console.log(R.current)
       //R.buffer.shadowBlur = 1;
       R.buffer.font = window.font;
       if (R.currentColor) {
@@ -496,9 +489,9 @@ function Roulette() {
       //R.buffer.shadowBlur = 0;
     }
     // 가운데 점
-    R.buffer.beginPath();
-    R.buffer.arc(R.center.x, R.center.y + 15, 3, 0, 2 * Math.PI);
-    R.buffer.fill();
+    // R.buffer.beginPath();
+    // R.buffer.arc(R.center.x, R.center.y + 15, 3, 0, 2 * Math.PI);
+    // R.buffer.fill();
 
     R.ctx.drawImage(R.bufferCanvas, 0, 0);
   }

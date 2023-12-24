@@ -4,6 +4,8 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: url("assets/01.png");
+  overflow: hidden;
 }
 
 * {
@@ -20,10 +22,12 @@ h1 {
 
   width: 400px;
   overflow: hidden;
+  position: relative;
+  left: 62px;
 
   border-bottom: 1px #607d8b;
-  color: #000000;
-  /* text-shadow: -3px 0 #116d23, 0 3px #116d23, 3px 0 #116d23, 0 -3px #116d23; */
+  color: #eee;
+  text-shadow: -3px 0 #000000, 0 3px #000000, 3px 0 #000000, 0 -3px #000000;
 }
 .img-absolute {
   position: absolute;
@@ -31,8 +35,8 @@ h1 {
 
 .container {
   position: absolute;
-  top: 0;
-  left: 800px;
+  top: -12%;
+  left: 46%;
   right: 0;
   bottom: 0;
   margin: auto;
@@ -64,7 +68,7 @@ ul {
 
   height: 580px;
   top: 120px;
-  left: 600px;
+  left: -400px;
   position: absolute;
 }
 
@@ -151,7 +155,7 @@ li.item > .item-title {
 }
 
 li.item > .item-title:focus {
-  background: transparent;
+  background: "#ffffff";
 }
 
 li.item > .item-weight {
@@ -274,7 +278,7 @@ li[data-chance]::after {
   background: #eff;
 }
 ul.lock .item-title[contenteditable]:hover {
-  background: transparent;
+  background: "#ffffff";
   cursor: default;
 }
 
@@ -287,8 +291,8 @@ ul.lock .item-title[contenteditable]:hover {
   font-family: "Hanna";
   font-size: 28px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -128px;
+  left: 120px;
   right: 0;
   margin: 0 auto;
   width: 300px;
