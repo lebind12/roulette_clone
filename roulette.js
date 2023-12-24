@@ -213,7 +213,7 @@ $(document).on("keydown", function (evt) {
 // });
 
 const bgImage = new Image();
-bgImage.src = "./assets/02.png";
+bgImage.src = "./assets/01.png";
 
 function Roulette() {
   var R = {
@@ -347,11 +347,11 @@ function Roulette() {
     R.buffer.fillStyle = "#ffffff";
     // R.buffer.fillStyle = R.ctx.createPattern(bgImage, 'repeat')
     // R.buffer.fillRect(0, 0, R.size.width, R.size.height);
-    R.buffer.drawImage(bgImage, 2, 3, 996, 935)
+    // R.buffer.drawImage(bgImage, -922, -154, 1920, 1080)
 
     // R.buffer.fillStyle = "#fffffd"
-    // R.buffer.roundRect(100, 0, 520, 60, 40)
-    // R.buffer.fill()
+    R.buffer.roundRect(100, 0, 520, 60, 40)
+    R.buffer.fill()
     // R.buffer.clearRect(0, 0, R.size.width, R.size.height);
 
     if (R.FPS) {
