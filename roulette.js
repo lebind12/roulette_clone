@@ -238,7 +238,7 @@ function Roulette() {
       R.bufferCanvas.height = R.size.height;
       R.buffer = R.bufferCanvas.getContext("2d", true);
       R.buffer.textAlign = "center";
-
+      
       requestAnimationFrame(OnUpdate);
     } catch (e) {
       console.log(e);
@@ -338,6 +338,8 @@ function Roulette() {
     R.dirty = false;
 
     // clear
+    
+    
     R.buffer.fillStyle = bgColor;
     R.buffer.fillRect(0, 0, R.size.width, R.size.height);
     //R.buffer.clearRect(0, 0, R.size.width, R.size.height);
@@ -374,6 +376,13 @@ function Roulette() {
       },
       ""
     );
+    
+    //======================================================================================
+    // 배경 넣을 곳
+    // var img = new Image()
+    // img.src = "assets/christmas_hitori_bocchi_woman.png"
+    // R.buffer.drawImage(img, 0, 0)
+    //======================================================================================
 
     //
     R.current = null;
@@ -487,9 +496,10 @@ function Roulette() {
       //R.buffer.shadowBlur = 0;
     }
     // 가운데 점
-    // R.buffer.beginPath();
-    // R.buffer.arc(R.center.x, R.center.y + 15, 3, 0, 2 * Math.PI);
-    // R.buffer.fill();
+    R.buffer.beginPath();
+    R.buffer.arc(R.center.x, R.center.y + 15, 3, 0, 2 * Math.PI);
+    R.buffer.fill();
+
     R.ctx.drawImage(R.bufferCanvas, 0, 0);
   }
 
