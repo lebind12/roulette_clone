@@ -244,17 +244,18 @@ li.empty::before {
   color: black;
   text-shadow: none;
 }
-li.empty {
+li {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.7s ease;
 }
-ul.lock > li.item.empty {
-  opacity: 0;
-}
+ul.lock > li.item.empty,
 ul.lock > li.item {
   opacity: 0;
 }
+/* ul.lock > li.item {
+  opacity: 0;
+} */
 li.empty:hover {
   opacity: 1;
 }
