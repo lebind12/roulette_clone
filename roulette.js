@@ -212,6 +212,9 @@ $(document).on("keydown", function (evt) {
 // 	updateData();
 // });
 
+const bgImage = new Image();
+bgImage.src = "./assets/02.png";
+
 function Roulette() {
   var R = {
     dirty: true,
@@ -237,6 +240,8 @@ function Roulette() {
       R.bufferCanvas.height = R.size.height;
       R.buffer = R.bufferCanvas.getContext("2d", true);
       R.buffer.textAlign = "center";
+
+      // R.buffer.drawImage(bgImage, 100, 100, 996, 935)
       
       requestAnimationFrame(OnUpdate);
     } catch (e) {
@@ -338,10 +343,16 @@ function Roulette() {
 
     // clear
     
-    
-    R.buffer.fillStyle = "transparent";
-    R.buffer.fillRect(0, 0, R.size.width, R.size.height);
-    //R.buffer.clearRect(0, 0, R.size.width, R.size.height);
+
+    R.buffer.fillStyle = "#ffffff";
+    // R.buffer.fillStyle = R.ctx.createPattern(bgImage, 'repeat')
+    // R.buffer.fillRect(0, 0, R.size.width, R.size.height);
+    R.buffer.drawImage(bgImage, 2, 3, 996, 935)
+
+    // R.buffer.fillStyle = "#fffffd"
+    // R.buffer.roundRect(100, 0, 520, 60, 40)
+    // R.buffer.fill()
+    // R.buffer.clearRect(0, 0, R.size.width, R.size.height);
 
     if (R.FPS) {
       R.buffer.font = window.font;
